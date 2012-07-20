@@ -1,0 +1,16 @@
+.movie
+
+  h1
+    @title
+  
+  p.rating
+    "Rating: " @rating
+
+  p.plot
+    @plot
+
+  .poster
+    img[src=@poster]
+
+
+
