@@ -5,6 +5,7 @@ require 'sinatra/respond_with'
 require 'sinatra/json'
 
 require './lib/api'
+require './lib/response'
 
 module Moviesio
   class WebApp < Sinatra::Base
@@ -12,6 +13,7 @@ module Moviesio
     helpers Sinatra::JSON
     register Sinatra::RespondWith
 
+    include Moviesio::ResponseHelper
 
     # Setup
 
@@ -43,12 +45,7 @@ module Moviesio
     end
 
     get '/m/:id' do
-      movie = @moviesio.movie(params[:id])
-
-      respond_to do |r|
-        r.html { erb "Loading..." }
-        r.json { movie.to_json }
-      end
+      respond :movie, @moviesio.movie(params[:id])
     end
 
   end

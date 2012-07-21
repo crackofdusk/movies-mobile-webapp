@@ -2,10 +2,10 @@
 <html>
     <head>
       <title>movies.io</title>
-        <script src="/js/lib/require.js", data-main="/js/application"></script>
+        <%= yield %>
+        <script src="/js/lib/require.js" data-main="/js/application.js"></script>
     </head>
 
     <body>
-        <%= yield %>
     </body>
 </html>

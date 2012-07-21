@@ -1,12 +1,8 @@
-define ['serenade', 'text!/js/views/movie.serenade', 'zepto'], (Serenade, view, $) ->
-
-  getMovie = (id, callback) ->
-    $.getJSON "/m/#{id}", (data) ->
-      callback(data)
+define ['serenade', 'text!/js/views/movie.serenade', 'data'], (Serenade, view, data) ->
 
   render = (id, callback) ->
-    getMovie id, (data) ->
-      element = Serenade.view(view).render(data)
+    data.fetch "/m/#{id}", (result) ->
+      element = Serenade.view(view).render(result)
       callback(element)
 
 
