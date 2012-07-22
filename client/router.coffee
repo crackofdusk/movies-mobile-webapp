@@ -1,18 +1,15 @@
-define ['crossroads'], (crossroads) ->
+define ['leviroutes'], (routes) ->
 
   class Router
 
     constructor: (@container) ->
-      @router = crossroads.create()
+      @app = new routes()
+
+      @app.get '/m/:id', (req) =>
+        require ['movie'], (m) =>
+          m.initialize(req.params.id, @display)
 
     run: ->
-      movie = @router.addRoute '/m/{id}', (id) =>
-        require ['movie'], (m) =>
-          m.initialize(id, @display)
-
-      # parse current URL to decide what to do
-      @router.parse(document.location.pathname)
-
 
     display: (element) =>
       @container.innerHTML = ""

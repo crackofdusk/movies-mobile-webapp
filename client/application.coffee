@@ -1,15 +1,16 @@
 require.config {
   paths: {
-    crossroads: 'lib/crossroads'
-    signals:    'lib/signals'
     text:       'lib/text'
     serenade:   'lib/serenade'
     zepto:      'lib/zepto'
+    leviroutes: 'lib/routes'
   },
   shim: {
     zepto: {
       exports: 'Zepto'
-
+    },
+    leviroutes: {
+      exports: 'routes'
     }
   }
 }
