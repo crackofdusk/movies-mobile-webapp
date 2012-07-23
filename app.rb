@@ -30,6 +30,9 @@ module Moviesio
 
     respond_to :html, :json
 
+    set :stylus_root, File.join(settings.root, 'client/styl')
+    set :stylus_directory, File.join(setting.public, 'css')
+
 
     # Filters
     
