@@ -4,8 +4,6 @@ require 'sinatra/config_file'
 require 'sinatra/respond_with'
 require 'sinatra/json'
 
-require 'stylus_rails/sinatra'
-
 require './lib/api'
 require './lib/response'
 
@@ -14,7 +12,6 @@ module Moviesio
     register Sinatra::ConfigFile
     helpers Sinatra::JSON
     register Sinatra::RespondWith
-    register Stylus::Sinatra
 
     include Moviesio::ResponseHelper
 
@@ -24,8 +21,6 @@ module Moviesio
 
     configure :development do
       register Sinatra::Reloader
-      set :stylus_root, File.join(settings.root, 'client/styl')
-      set :stylus_directory, File.join(settings.public_folder, 'css')
     end
 
     set :layout_engine, :erb
