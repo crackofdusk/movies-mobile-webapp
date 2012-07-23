@@ -4,7 +4,7 @@ require 'sinatra/config_file'
 require 'sinatra/respond_with'
 require 'sinatra/json'
 
-require 'stylus_rails'
+require 'stylus_rails/sinatra'
 
 require './lib/api'
 require './lib/response'
@@ -24,14 +24,13 @@ module Moviesio
 
     configure :development do
       register Sinatra::Reloader
+      set :stylus_root, File.join(settings.root, 'client/styl')
+      set :stylus_directory, File.join(settings.public_folder, 'css')
     end
 
     set :layout_engine, :erb
 
     respond_to :html, :json
-
-    set :stylus_root, File.join(settings.root, 'client/styl')
-    set :stylus_directory, File.join(setting.public, 'css')
 
 
     # Filters
