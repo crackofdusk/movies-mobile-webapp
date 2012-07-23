@@ -4,6 +4,8 @@ require 'sinatra/config_file'
 require 'sinatra/respond_with'
 require 'sinatra/json'
 
+require 'stylus_rails'
+
 require './lib/api'
 require './lib/response'
 
@@ -12,6 +14,7 @@ module Moviesio
     register Sinatra::ConfigFile
     helpers Sinatra::JSON
     register Sinatra::RespondWith
+    register Stylus::Sinatra
 
     include Moviesio::ResponseHelper
 
