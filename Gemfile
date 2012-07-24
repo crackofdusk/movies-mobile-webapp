@@ -10,6 +10,8 @@ gem 'faraday_middleware', '~> 0.8.8'
 
 gem 'hashie', '~> 1.2.0'
 
+gem 'sinatra-assetpack', :require => 'sinatra/assetpack'
+
 group :development do
   gem 'guard-coffeescript', '~> 1.1.0'
 end
