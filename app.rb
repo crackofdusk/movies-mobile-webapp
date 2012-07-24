@@ -3,6 +3,7 @@ require 'sinatra/reloader'
 require 'sinatra/config_file'
 require 'sinatra/respond_with'
 require 'sinatra/json'
+require 'sinatra/assetpack'
 
 require './lib/api'
 require './lib/response'
@@ -12,6 +13,7 @@ module Moviesio
     register Sinatra::ConfigFile
     helpers Sinatra::JSON
     register Sinatra::RespondWith
+    register Sinatra::AssetPack
 
     include Moviesio::ResponseHelper
 
@@ -26,6 +28,19 @@ module Moviesio
     set :layout_engine, :erb
 
     respond_to :html, :json
+
+    assets {
+
+      js :requirejs, [
+        '/js/lib/require.js'
+      ]
+
+      css :application, [
+        '/css/fonts.css',
+        '/css/application.css'
+      ]
+    }
+
 
 
     # Filters
