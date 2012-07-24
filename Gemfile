@@ -13,5 +13,6 @@ gem 'hashie', '~> 1.2.0'
 gem 'sinatra-assetpack', '~> 0.0.11'
 
 group :development do
+  gem 'shotgun', '~> 0.9'
   gem 'guard-coffeescript', '~> 1.1.0'
 end

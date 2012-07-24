@@ -1,46 +1,24 @@
 require 'sinatra/base'
-require 'sinatra/reloader'
 require 'sinatra/config_file'
-require 'sinatra/respond_with'
-require 'sinatra/json'
-require 'sinatra/assetpack'
+require 'sinatra/content_for'
 
-require './lib/api'
+require './lib/assets'
 require './lib/response'
+require './lib/api'
 
 module Moviesio
   class WebApp < Sinatra::Base
     register Sinatra::ConfigFile
-    helpers Sinatra::JSON
-    register Sinatra::RespondWith
-    register Sinatra::AssetPack
+    helpers Sinatra::ContentFor
 
     include Moviesio::ResponseHelper
+    include Moviesio::Assets
 
     # Setup
 
     config_file File.expand_path('../config/api.yml', __FILE__)
 
-    configure :development do
-      register Sinatra::Reloader
-    end
-
     set :layout_engine, :erb
-
-    respond_to :html, :json
-
-    assets {
-
-      js :requirejs, [
-        '/js/lib/require.js'
-      ]
-
-      css :application, [
-        '/css/fonts.css',
-        '/css/application.css'
-      ]
-    }
-
 
 
     # Filters

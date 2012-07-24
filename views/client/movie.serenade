@@ -1,16 +1,40 @@
-.movie
+section.movie
 
-  h1
-    @title
+  section.info
+    h1
+      @title
+    
+    .rating
+      "Rating: " @rating
   
-  p.rating
-    "Rating: " @rating
+    aside.poster
+      img[src=@poster]
+  
+    section.plot
+      @plot
 
-  p.plot
-    @plot
 
-  .poster
-    img[src=@poster]
+  section.sources
+    - in @sources
+      table
+      - collection @torrents
+         tr
+           td.dl
+             a[href=@magnet] "Download"
+           td.qu
+             @quality
+           td.si
+             @size
+           td.se
+             @seeders
+             span.arrow "▲"
+           td.le
+             @leechers
+           td.vf
+             @status
+           td.sub
+             @subtitles
+
 
 
 

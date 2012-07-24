@@ -16,4 +16,4 @@ require.config {
 }
 
 require ['router'], (router) ->
-  router.initialize(document.body)
+  router.initialize(document.querySelector("#app"))

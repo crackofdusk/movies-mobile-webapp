@@ -1,0 +1,17 @@
+.poster {
+    float: right;
+    max-width: 35%;
+}
+
+.poster img {
+    max-width: 100%;
+}
+
+.sources {
+    margin-top: 2em;
+}
+
+.sources td {
+    padding-right: 20px;
+}
+

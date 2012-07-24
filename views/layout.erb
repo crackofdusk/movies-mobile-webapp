@@ -3,11 +3,23 @@
     <head>
       <title>movies.io</title>
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-      <%= css :application %>
-      <%= yield %>
+      <%= css :base %>
+      <%= css :phone, :media => 'only screen and (max-width: 600px), only screen and (max-device-width: 600px)' %>
+      <%= css :desktop, :media => 'only screen and (min-width: 601px), only screen and (min-device-width: 601px)' %>
+      <%= yield_content :head %>
       <%= js :requirejs, 'data-main' => '/js/application' %>
     </head>
 
     <body>
+      <header class="topbar">
+        <nav>
+          <a href="/">movies.io</a>
+          <%= yield_content :nav %>
+        </nav>
+      </header>
+
+      <section id="app">
+        <%= yield %>
+      </section>
     </body>
 </html>
