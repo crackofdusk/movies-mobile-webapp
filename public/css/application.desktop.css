@@ -1,7 +1,8 @@
 body {
-    font: 16px 'LatoRegular', Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    padding: 0 10px;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 h1 {
@@ -12,7 +13,7 @@ h1 {
     display: block;
     position: fixed;
     margin: 0 auto;
-    padding: 5px 10px ;
+    padding: 5px 0;
     top: 0;
     left: 0;
     width: 100%;
@@ -27,7 +28,44 @@ h1 {
     text-decoration: none;
 }
 
-#app {
-    margin-top: 58px;
+.topbar a:hover {
+    text-decoration: none;
+    color: white;
+    opacity: 1;
+}
 
+.topbar nav {
+    width: 845px;
+    margin: 0 auto;
+}
+
+.toplogo {
+    height: 20px;
+    vertical-align: middle;
+    padding: 0 3px 2px 5px;
+}
+
+.searchbar {
+    float: right;
+}
+
+.searchbar #q {
+    -webkit-transition: width 0.3s ease 0s;
+       -moz-transition: width 0.3s ease 0s;
+            transition: width 0.3s ease 0s;
+    width: 180px;
+    margin-right: 10px;
+    font-size: 11pt;
+    padding: 6px;
+}
+
+.searchbar #q:focus {
+    width: 280px;
+    opacity: 1.0;
+}
+
+
+#app {
+    margin: 38px auto;
+    width: 845px;
 }

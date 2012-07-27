@@ -1,0 +1,120 @@
+
+.movie {
+    border: 1px solid rgba(119, 119, 119, 0.43);
+    background: rgba(255, 255, 255, 0.92);
+    padding: 20px 30px;
+}
+
+.movie .info header {
+    margin-bottom: 10px;
+}
+
+h1 {
+    display: inline;
+}
+
+.rating {
+    font: 18px 'LatoLight', Helvetica, Arial, sans-serif;
+}
+
+.runtime {
+    font: 18px 'LatoLight', Helvetica, Arial, sans-serif;
+    float: right;
+    margin-top: 5px;
+}
+
+.poster {
+    float: right;
+    width: 190px;
+    margin-left: 15px;
+}
+
+.poster img {
+    border: 1px solid #504E4E;
+    width: 100%;
+    padding: 0;
+}
+
+.plot {
+    font-size: 20px;
+    max-width: 570px;
+}
+
+.sources {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 90%;
+    vertical-align: middle;
+}
+
+.sources table {
+    width: 100%;
+}
+
+.sources tr {
+    line-height: 30px;
+    font-size: 16px;
+}
+
+.sources tr:hover {
+    background: rgba(128, 128, 128, 0.2);
+}
+
+.sources td .arrow {
+    font-size: 10px;
+}
+
+.sources tr td {
+    padding-left: 0;
+    padding-right: 25px;
+}
+
+.sources td.sub {
+    padding-right: 0;
+}
+
+.sources td.dl {
+    padding-right: 20px;
+}
+
+.sources td.qu {
+    padding-right: 10px;
+}
+
+.sources td.se, .sources td.le {
+    text-align: right;
+    color: #4E3B3B;
+}
+
+.sources td.vf {
+    color: #5E9C5E;
+}
+
+.sources td.uf {
+    color: #777;
+    min-width: 84px;
+}
+
+.sources td.si {
+    font-family: 'LatoBold';
+    font-size: 90%;
+    text-align: right;
+}
+
+.sources td.source {
+    padding-left: 28px;
+    background-repeat: no-repeat;
+    background-position: 7px 7px;
+    background-image: url('/assets/dl.png');
+}
+
+.tag {
+    display: inline-block;
+    padding: 0px;
+    font-family: 'LatoRegular';
+    color: #343434;
+    font-size: 10pt;
+    width: 45px;
+    text-align: center;
+    font-variant: small-caps;
+}

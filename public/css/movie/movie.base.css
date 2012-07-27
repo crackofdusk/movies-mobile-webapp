@@ -1,8 +1,23 @@
 h1  {
-    margin-bottom: 10px;
     line-height: 1em;
 }
 
 .rating {
     margin-bottom: 21px;
+    color: #777;
 }
+
+.rating .full {
+    color: #D93;
+    margin-left: 5px;
+}
+
+.rating .empty {
+    color: #999;
+}
+
+.runtime {
+    color: #777;
+}
+
+

@@ -1,33 +1,25 @@
 body {
     font: 16px 'LatoRegular', Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    padding: 0 10px;
+    line-height: 1.4;
 }
 
 h1 {
     font-weight: 400;
 }
 
-.topbar {
-    display: block;
-    position: fixed;
-    margin: 0 auto;
-    padding: 5px 10px ;
-    top: 0;
-    left: 0;
-    width: 100%;
-    color: #797979;
-    background-color: rgba(10, 10, 10, 0.87);
-    font-size: 21px;
-    font-family: 'LatoLight', Helvetica, Arial, sans-serif;
+.clear {
+    clear: both;
 }
 
-.topbar a {
-    color: #C0BDC2;
+a {
+    color: #225F8C;
     text-decoration: none;
 }
 
-#app {
-    margin-top: 58px;
+a:active, a:hover, a:focus, * {
+    outline: none;
+}
 
+a:active, a:hover, a:focus {
+    text-decoration: underline;
 }

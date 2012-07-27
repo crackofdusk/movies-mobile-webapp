@@ -1,2 +1,5 @@
 /public/js/*.js
+/public/js/models/*.js
+/public/js/helpers/*.js
+
 /config/api.yml
