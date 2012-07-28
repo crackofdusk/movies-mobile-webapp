@@ -3,14 +3,15 @@ define [
   'text!/js/views/movie.serenade'
   'data'
   'models/movie'
+  'controllers/movie'
   'helpers/movie_helpers'
   'helpers/source_helpers'
-], (Serenade, view, data, Movie, movieHelpers, sourceHelpers) ->
+], (Serenade, view, data, Movie, MovieController, movieHelpers, sourceHelpers) ->
 
   render = (id, callback) ->
     data.fetch "/m/#{id}", (result) ->
       movie = new Movie(result)
-      element = Serenade.view(view).render(movie)
+      element = Serenade.view(view).render(movie, MovieController)
       callback(element)
 
 

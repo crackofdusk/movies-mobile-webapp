@@ -1,5 +1,6 @@
 /public/js/*.js
 /public/js/models/*.js
+/public/js/controllers/*.js
 /public/js/helpers/*.js
 
 /config/api.yml

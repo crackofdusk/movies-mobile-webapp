@@ -11,6 +11,10 @@ h1 {
     clear: both;
 }
 
+.clearleft {
+    clear: left;
+}
+
 a {
     color: #225F8C;
     text-decoration: none;

@@ -1,22 +1,33 @@
 section.movie
 
-  section.info
-    header
-        h1
-          @title " (" @year ")"
+  header
+    h1
+      @title " (" @year ")"
 
-        .runtime
-          @runtime
+    .runtime
+      @runtime
 
-    .rating
-      - rating
+  .rating
+    - rating
+
+  aside.poster
+    img[src=@poster]
+
+  section.plot
+    @plot
 
 
-    aside.poster
-      img[src=@poster]
+  section.watchlists
+    ul
+      - collection @watchlists
+        // 'true' 'false' classes are not semantic, but do the job
+         li[class=@selected]
+           a[href="#" event:click=toggleWatchlist!]
+             @name
+      li.more
+        a[href="#" event:click=displayWatchlists!] "+"
 
-    section.plot
-      @plot
+    .clearleft
 
 
   section.sources

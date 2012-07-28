@@ -2,10 +2,10 @@
 .movie {
     border: 1px solid rgba(119, 119, 119, 0.43);
     background: rgba(255, 255, 255, 0.92);
-    padding: 20px 30px;
+    padding: 25px;
 }
 
-.movie .info header {
+.movie header {
     margin-bottom: 10px;
 }
 
@@ -40,7 +40,48 @@ h1 {
     max-width: 570px;
 }
 
+.watchlists {
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.watchlists ul {
+    margin: 0;
+    padding: 0;
+}
+
+.watchlists li {
+    float: left;
+    margin: 2px 10px 2px 0;
+    border-radius: 3px;
+}
+
+.watchlists a {
+    color: #636363;
+    text-decoration: none;
+    padding: 3px;
+}
+
+.watchlists .true, .watchlists .more {
+    background-color: #E2DEDE;
+    background-color: #D5D5D5;
+}
+
+.watchlists .false {
+    display: none;
+}
+
+.watchlists.edit .false {
+    display: inline;
+}
+
+.watchlists .more a {
+    padding: 3px 6px;
+}
+
+
 .sources {
+    max-width: 570px;
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 90%;
