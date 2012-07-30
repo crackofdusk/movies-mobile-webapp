@@ -35,6 +35,27 @@ h1 {
     padding: 0;
 }
 
+.poster .trailer_button {
+    display: inline-block;
+    margin: 5px auto;
+    margin-top: -4px;
+    display: block;
+    margin-top: -3px;
+    width: 176px;
+    padding: 7px;
+    font-size: 11pt;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+    border: 1px solid #3A3838;
+    color: #E0E0E0;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2E2E2E), color-stop(1, #131313));
+    background: -moz-linear-gradient(top, #2E2E2E, #131313);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2E2E2E', endColorstr='#131313');
+    -webkit-box-shadow: inset 0px 1px 0px 0px #302B2B;
+    box-shadow: inset 0px 1px 0px 0px #302B2B;
+    text-shadow: 0 0 1px #2C1717;
+}
+
 .plot {
     font-size: 20px;
     max-width: 570px;
@@ -159,3 +180,8 @@ h1 {
     text-align: center;
     font-variant: small-caps;
 }
+
+.player {
+    height: 430px;
+}
+

@@ -1,4 +1,4 @@
-define ['zepto'], ($) ->
+define ['zepto', '../helpers/youtube_helper'], ($, YouTube) ->
   class MovieController
     constructor: (@movie) ->
 
@@ -10,5 +10,14 @@ define ['zepto'], ($) ->
       $('.watchlists').addClass('edit')
       element.parentNode.removeChild(element)
 
+    watchTrailer: (model, element) ->
+      url = element.href
+      player = new YouTube(url, 'trailer')
+
+      $('.collapsable').addClass('collapsed')
+      $('.darkable').addClass('dark')
+      $('.player').removeClass('collapsed')
+
+      player.play()
 
   return MovieController

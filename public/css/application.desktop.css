@@ -64,8 +64,12 @@ h1 {
     opacity: 1.0;
 }
 
-
 #app {
     margin: 38px auto;
     width: 845px;
+}
+
+.dark {
+    color: #A0A0A0;
+    background: black !important; /* cascading sucks */
 }

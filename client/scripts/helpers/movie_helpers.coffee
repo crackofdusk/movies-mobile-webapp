@@ -39,7 +39,6 @@ define () ->
       title = @model.title
       year = @model.year
 
-
   {
     initialize: (serenade) ->
       helpers = new MovieHelpers(document)

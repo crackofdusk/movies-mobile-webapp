@@ -4,6 +4,7 @@ require.config {
     serenade:   'lib/serenade'
     zepto:      'lib/zepto'
     leviroutes: 'lib/routes'
+    jwplayer:   'lib/jwplayer'
   },
   shim: {
     zepto: {
@@ -11,6 +12,9 @@ require.config {
     },
     leviroutes: {
       exports: 'routes'
+    },
+    jwplayer: {
+      exports: 'jwplayer'
     }
   }
 }

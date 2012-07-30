@@ -1,4 +1,4 @@
-section.movie
+section.movie.darkable
 
   header
     h1
@@ -7,17 +7,18 @@ section.movie
     .runtime
       @runtime
 
-  .rating
+  .rating.collapsable
     - rating
 
-  aside.poster
+  aside.poster.collapsable
     img[src=@poster]
+    - if @trailer
+      a[href=@trailer event:click=watchTrailer! class="trailer_button"] "Watch trailer"
 
-  section.plot
+  section.plot.collapsable
     @plot
 
-
-  section.watchlists
+  section.watchlists.collapsable
     ul
       - collection @watchlists
         // 'true' 'false' classes are not semantic, but do the job
@@ -30,7 +31,7 @@ section.movie
     .clearleft
 
 
-  section.sources
+  section.sources.collapsable
       table
       - collection @torrents
          tr
@@ -50,6 +51,9 @@ section.movie
              @status
            td.sub
              - subtitles
+
+  section.player.collapsed
+    #trailer
 
 
   .clear
