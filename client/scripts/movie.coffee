@@ -8,17 +8,30 @@ define [
   'helpers/source_helpers'
 ], (Serenade, view, data, Movie, MovieController, movieHelpers, sourceHelpers) ->
 
-  render = (id, callback) ->
+  movie = null
+
+  fetch = (id, callback) ->
     data.fetch "/m/#{id}", (result) ->
-      movie = new Movie(result)
-      element = Serenade.view(view).render(movie, MovieController)
+      callback(result)
+
+
+  render = (model, callback) ->
+      element = Serenade.view(view).render(model, MovieController)
       callback(element)
 
 
   {
     initialize: (id, callback) ->
-      movieHelpers.initialize(Serenade)
-      sourceHelpers.initialize(Serenade)
-      render(id, callback)
+      unless movie
+        movieHelpers.initialize(Serenade)
+        sourceHelpers.initialize(Serenade)
+
+      fetch id, (data) ->
+        # For some reason both of these are needed for proper updating. Need to
+        # investigate…
+        movie = new Movie(data)
+        movie.set(data)
+
+        render(movie, callback)
   }
 

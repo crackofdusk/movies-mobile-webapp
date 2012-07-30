@@ -18,17 +18,17 @@ section.movie.darkable
   section.plot.collapsable
     @plot
 
-  section.watchlists.collapsable
-    ul
-      - collection @watchlists
-        // 'true' 'false' classes are not semantic, but do the job
-         li[class=@selected]
-           a[href="#" event:click=toggleWatchlist!]
-             @name
-      li.more
-        a[href="#" event:click=displayWatchlists!] "+"
-
-    .clearleft
+//  section.watchlists.collapsable
+//    ul
+//      - collection @watchlists
+//        // 'true' 'false' classes are not semantic, but do the job
+//         li[class=@selected]
+//           a[href="#" event:click=toggleWatchlist!]
+//             @name
+//      li.more
+//        a[href="#" event:click=displayWatchlists!] "+"
+//
+//    .clearleft
 
 
   section.sources.collapsable
